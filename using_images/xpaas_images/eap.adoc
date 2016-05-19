@@ -184,7 +184,7 @@ This procedure results in losing configuration placeholders for various settings
 If an application is not starting, use the following command to view details to locate and troubleshoot the problem:
 
 ----
-$ oc describe po <pod_name>
+$ oc describe pod <pod_name>
 ----
 
 To troubleshoot running xPaaS JBoss EAP containers, you can either view the OpenShift logs, or view the JBoss EAP logs displayed to the container’s console. Use the following command to view the JBoss EAP logs:
