@@ -190,7 +190,7 @@ $ oc describe pod <pod_name>
 To troubleshoot running xPaaS JBoss EAP containers, you can either view the OpenShift logs, or view the JBoss EAP logs displayed to the container’s console. Use the following command to view the JBoss EAP logs:
 
 ----
-$ oc logs -f <pod_name> <container_name>
+$ oc logs -f <pod_name> [container_name]
 ----
 
 [NOTE]
