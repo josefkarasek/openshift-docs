@@ -1,0 +1,63 @@
+// Module included in the following assemblies:
+//
+// * logging/efk-logging-curator.adoc
+
+[id="efk-logging-curator-scripted-{context}"]
+= Configuring Curator in scripted deployments
+
+Use information in this section if you need to configure Curator in scripted deployments
+
+.Prerequisite
+
+Cluster logging and Elasticsearch must be installed.
+Set cluster logging to the unmanaged state.
+
+.Procedure
+
+Use the following snippets to configure Curator in your scripts
+
+. Create and modify the configuration:
++
+* For scripted deployments
++
+.. Copy the Curator configuration file and the {product-title} custom configuration file
+from the Curator configuration map and create separate files for each:
++
+----
+$ oc extract configmap/curator --keys=curator5.yaml,config.yaml --to=/my/config
+----
++
+.. Edit the *_/my/config/curator5.yaml_* and *_/my/config/config.yaml_* files.
++
+.. Delete the existing Curator config map and add the edited YAML files to a new Curator config map.
++
+----
+$ oc delete configmap curator ; sleep 1
+$ oc create configmap curator \
+    --from-file=curator5.yaml=/my/config/curator5.yaml \
+    --from-file=config.yaml=/my/config/config.yaml \
+    ; sleep 1
+----
++
+* Alternatively, if you are using the *actions file*:
++
+.. Copy the Curator configuration file and the {product-title} `actions` file
+from the Curator configuration map and create separate files for each:
++
+----
+$ oc extract configmap/curator --keys=curator5.yaml,actions.yaml --to=/my/config
+----
++
+.. Edit the *_/my/config/curator5.yaml_* and /my/config/actions.yaml files.
++
+.. Delete the existing Curator config map and add the edited YAML files to a new Curator config map.
++
+----
+$ oc delete configmap curator ; sleep 1
+$ oc create configmap curator \
+    --from-file=curator5.yaml=/my/config/curator5.yaml \
+    --from-file=actions.yaml=/my/config/actions.yaml \
+    ; sleep 1
+----
+
+The next iteration will use this configuration.
