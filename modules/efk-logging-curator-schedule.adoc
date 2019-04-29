@@ -43,7 +43,7 @@ metadata:
     type: curator
 ----
 
-<1> Specify the schedule for Curator in [cron format](https://en.wikipedia.org/wiki/Cron).
+<1> Specify the schedule for Curator in link:https://en.wikipedia.org/wiki/Cron[cron format].
 
 [NOTE]
 ====

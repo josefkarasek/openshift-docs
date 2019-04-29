@@ -82,8 +82,8 @@ For example, to configure Curator to:
 - Delete indices in the *myapp-qe* project older than `1 week`
 - Delete *operations* logs older than `8 weeks`
 - Delete all other projects indices after they are `31 days` old
-- Delete indices older than 1 day that are matched by the '^project\..+\-dev.*$' regex
-- Delete indices older than 2 days that are matched by the '^project\..+\-test.*$' regex
+- Delete indices older than 1 day that are matched by the `^project\..+\-dev.*$` regex
+- Delete indices older than 2 days that are matched by the `^project\..+\-test.*$` regex
 
 Use:
 

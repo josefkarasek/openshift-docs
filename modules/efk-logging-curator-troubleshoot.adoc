@@ -6,7 +6,7 @@
 = Troubleshooting Curator
 
 You can use information in this section for debugging Curator. For example, if curator is in failed state, but the log messages do not
-provide a reason, you could increase the log level and run the cronjob with this command, instead of waiting for another scheduled run of the cron job.
+provide a reason, you could increase the log level and trigger a new job, instead of waiting for another scheduled run of the cron job.
 
 .Prerequisite
 
@@ -17,7 +17,6 @@ Cluster logging and Elasticsearch must be installed.
 Enable debug log of Curator and trigger next Curator iteration manually
 
 . Enable debug log of Curator by running the following:
-
 +
 ----
 $ oc set env cronjob/curator CURATOR_LOG_LEVEL=DEBUG CURATOR_SCRIPT_LOG_LEVEL=DEBUG
