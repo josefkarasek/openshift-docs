@@ -17,7 +17,6 @@ Cluster logging and Elasticsearch must be installed.
 Enable the Curator debug log and trigger next Curator iteration manually
 
 . Enable debug log of Curator:
-
 +
 ----
 $ oc set env cronjob/curator CURATOR_LOG_LEVEL=DEBUG CURATOR_SCRIPT_LOG_LEVEL=DEBUG

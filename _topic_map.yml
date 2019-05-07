@@ -79,6 +79,11 @@ Topics:
     File: installing-aws-customizations
   - Name: Uninstalling a cluster on AWS
     File: uninstalling-cluster-aws
+- Name: Installing on bare metal
+  Dir: installing_bare_metal
+  Topics:
+  - Name: Installing a cluster on bare metal
+    File: installing-bare-metal
 ---
 Name: Updating clusters
 Dir: updating
@@ -307,6 +312,9 @@ Topics:
   File: managing_multinetworking
 - Name: Ingress controller configuration
   File: ingress-controller-configuration
+- Name: Using multicast
+  File: using-multicast
+  Distros: openshift-origin, openshift-enterprise
 ---
 Name: Registry
 Dir: registry
@@ -361,6 +369,8 @@ Topics:
     File: persistent-storage-csi
   - Name: Persistent storage using OpenStack Manila
     File: persistent-storage-manila
+- Name: Expanding persistent volumes
+  File: expanding-persistent-volumes
 - Name: Dynamic provisioning
   File: dynamic-provisioning
 ---
@@ -505,6 +515,8 @@ Topics:
     File: efk-logging-systemd
   - Name: Sending logs to external devices
     File: efk-logging-external
+- Name: Viewing Elasticsearch status
+  File: efk-logging-elasticsearch-status
 - Name: Manually rolling out Elasticsearch
   File: efk-logging-manual-rollout
 - Name: Troubleshooting Kibana

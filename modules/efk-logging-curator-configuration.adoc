@@ -7,6 +7,7 @@
 
 You can configure the Curator cron schedule using the Cluster Logging Custom Resource
 created by the Cluster Logging Operator installation.
+
 The Cluster Logging Operator creates a ConfigMap with default configuration options,
 which you can further modify.
 
